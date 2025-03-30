@@ -36,5 +36,30 @@ function fetchProductsThen() {
   fetchProductsAsync();
   
 
+  // Task 4: Display products in the DOM with name, price, and image
 
+  function displayProducts(products) {
+    const container = document.getElementById('product-container');
+    container.innerHTML = '';  // Clear existing content
+    
+    // Loop through the first 5 products
+    products.slice(0, 5).forEach(product => {
+      const productElement = document.createElement('div');
+      productElement.classList.add('product');
+      
+      const productName = document.createElement('h3');
+      productName.textContent = product.name;
+      
+      const productPrice = document.createElement('p');
+      productPrice.textContent = `$${product.price}`;
+      
+      const productImage = document.createElement('img');
+      productImage.src = product.image;
+      productImage.alt = product.name;
+      
+      productElement.append(productName, productPrice, productImage);
+      container.appendChild(productElement);
+    });
+  }
+  
 
