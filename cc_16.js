@@ -63,3 +63,9 @@ function fetchProductsThen() {
   }
   
 
+  // Task 5: Add reusable handleError function
+  
+  function handleError(error) {
+    console.log('An error occurred:', error.message);
+  }
+  
