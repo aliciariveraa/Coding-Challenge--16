@@ -64,8 +64,14 @@ function fetchProductsThen() {
   
 
   // Task 5: Add reusable handleError function
-  
+
   function handleError(error) {
     console.log('An error occurred:', error.message);
   }
   
+
+  // Task 6: Trigger both fetch methods at script load
+
+  // Trigger both fetch methods at script load
+fetchProductsThen();
+fetchProductsAsync();
